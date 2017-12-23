@@ -21,9 +21,9 @@ const ichimoku = new Ichimoku({
 
 for( let candle of candles ) {
 	let ichimokuValues = ichimoku.nextValue({
-		high: candle.high,
-		low: candle.low,
-		close: candle.close
+		high  : candle.high,
+		low   : candle.low,
+		close : candle.close
 	})
 }
 ```
