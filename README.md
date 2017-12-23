@@ -1,3 +1,5 @@
+[![Travis CI](https://img.shields.io/travis/rd13/ichimoku.svg?style=flat-square)](https://travis-ci.org/rd13/ichimoku)
+
 # Ishimoku Kinko Hyo Technical Indicator
 
 A Javascript implementation of the technical indicator Ishimoku Kinko Hyo.
