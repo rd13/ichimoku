@@ -1,10 +1,23 @@
 {
  "name": "ichimoku",
  "version": "1.0.1",
- "main": "src/index.js",
+ "description": "Ishimoku Kinko Hyo Technical Indicator",
+ "main": "lib/index.js",
+ "module": "lib/index.js",
  "repository": "git@github.com:rd13/ichimoku.git",
+ "homepage": "https://github.com/rd13/ichimoku/blob/master/README.md",
  "author": "mailstu@gmail.com",
  "license": "MIT",
+ "keywords": [
+	"Ishimoku",
+	"Ishimoku cloud",
+	"Technical indicators",
+	"Technical analysis",
+	"finance",
+	"forex",
+	"stocks",
+	"Bitcoin"
+ ],
  "scripts": {
   "test": "mocha",
   "build": "babel --presets es2015,stage-0 src -d lib"
