@@ -1,4 +1,4 @@
-const Ichimoku = require('../src/index.js')
+const Ichimoku = require('../lib/index.js')
 const candles = require('./data.js')
 const assert = require('chai').assert;
 const expect = require('chai').expect;
