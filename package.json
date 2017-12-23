@@ -1,6 +1,6 @@
 {
  "name": "ichimoku",
- "version": "1.0.0",
+ "version": "1.0.1",
  "main": "src/index.js",
  "repository": "git@github.com:rd13/ichimoku.git",
  "author": "mailstu@gmail.com",
