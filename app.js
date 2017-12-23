@@ -3,10 +3,10 @@ class Ichimoku {
 		let _this = this
 
 		this.defaults = {
-			conversionPeriod: 9,
-			basePeriod: 26,
-			spanPeriod: 52,
-			displacement: 26
+			conversionPeriod : 9,
+			basePeriod       : 26,
+			spanPeriod       : 52,
+			displacement     : 26
 		}
 
 		// Overwrite param defaults
@@ -21,18 +21,13 @@ class Ichimoku {
 			let spanCounter = 0
 			let highs = []
 			let lows = []
-
 			let spanAs = []
 			let spanBs = []
 
-			let conversionPeriodLow
-			let conversionPeriodHigh
+			let conversionPeriodLow, conversionPeriodHigh
+			let basePeriodLow, basePeriodHigh
+			let spanbPeriodLow, spanbPeriodHigh
 
-			let basePeriodLow
-			let basePeriodHigh
-
-			let spanbPeriodLow
-			let spanbPeriodHigh
 			tick = yield
 			
 			while (true) {
@@ -66,6 +61,7 @@ class Ichimoku {
 					spanbPeriodHigh = highs.slice(-_this.params.spanPeriod).reduce( (a,b) => Math.max(a,b) )
 					spanBs.push((spanbPeriodHigh + spanbPeriodLow) /2)
 
+					// Senkou Span A / Senkou Span B offset by 26 periods
 					if(spanCounter < _this.params.displacement) {
 						spanCounter++
 					} else {
@@ -81,30 +77,6 @@ class Ichimoku {
 					}
 
 				}
-				// if(conversionCounter < _this.params.conversionPeriod) {
-				// 	conversionCounter++
-				// 	conversionPeriodLows.push(tick.low)
-				// 	conversionPeriodLow = Math.min(conversionPeriodLow, tick.low)
-        //
-				// 	conversionPeriodHighs.push(tick.high)
-				// 	conversionPeriodHigh = Math.max(conversionPeriodHigh, tick.high)
-				//
-				// } else {
-				// 	conversionPeriodLows.push(tick.low)
-				// 	conversionPeriodHighs.push(tick.high)
-        //
-				// 	conversionPeriodLows.shift()
-				// 	conversionPeriodLow = conversionPeriodLows.reduce( (a,b) => Math.min(a,b) )
-        //
-				// 	conversionPeriodHighs.shift()
-				// 	conversionPeriodHigh = conversionPeriodHighs.reduce( (a,b) => Math.max(a,b) )
-        //
-				// 	result = {
-				// 		conversion: (conversionPeriodHigh + conversionPeriodLow) /2,
-				// 		base: 8
-				// 	}
-				//
-				// }
 
 				tick = yield result
 			}
