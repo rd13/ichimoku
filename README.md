@@ -20,7 +20,7 @@ const ichimoku = new Ichimoku({
 })
 
 for( let candle of candles ) {
-	let ichimokuValues = ichimoku.nextValue({
+	let ichimokuValue = ichimoku.nextValue({
 		high  : candle.high,
 		low   : candle.low,
 		close : candle.close
@@ -32,8 +32,8 @@ for( let candle of candles ) {
 ```json
 { 
 	"conversion" : 1.33956,
-	"base"       : 1.337235,
+	"base"       : 1.33723,
 	"spanA"      : 1.33791,
-	"spanB"      : 1.3373599999999999
+	"spanB"      : 1.33735
 }
 ```
