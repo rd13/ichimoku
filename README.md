@@ -31,9 +31,9 @@ for( let candle of candles ) {
 ###### Output
 ```json
 { 
-	conversion : 1.33956,
-  base       : 1.337235,
-  spanA      : 1.33791,
-  spanB      : 1.3373599999999999
+	"conversion" : 1.33956,
+	"base"       : 1.337235,
+	"spanA"      : 1.33791,
+	"spanB"      : 1.3373599999999999
 }
 ```
