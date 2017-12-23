@@ -2,7 +2,7 @@
 
 # Ichimoku Kinko Hyo Technical Indicator
 
-A Javascript implementation of the technical indicator Ichimoku Kinko Hyo.
+A Javascript implementation of the technical indicator [Ichimoku Kinko Hyo](https://en.wikipedia.org/wiki/Ichimoku_Kink%C5%8D_Hy%C5%8D).
 
 It calculates:
 
