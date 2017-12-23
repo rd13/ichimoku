@@ -1,6 +1,6 @@
 {
  "name": "ichimoku",
- "version": "1.0.2",
+ "version": "1.0.3",
  "description": "Ichimoku Kinko Hyo Technical Indicator",
  "main": "lib/index.js",
  "module": "lib/index.js",
