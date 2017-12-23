@@ -1,6 +1,6 @@
 {
  "name": "ichimoku",
- "version": "1.0.1",
+ "version": "1.0.2",
  "description": "Ishimoku Kinko Hyo Technical Indicator",
  "main": "lib/index.js",
  "module": "lib/index.js",
@@ -9,14 +9,14 @@
  "author": "mailstu@gmail.com",
  "license": "MIT",
  "keywords": [
-	"Ishimoku",
-	"Ishimoku cloud",
-	"Technical indicators",
-	"Technical analysis",
-	"finance",
-	"forex",
-	"stocks",
-	"Bitcoin"
+  "Ishimoku",
+  "Ishimoku cloud",
+  "Technical indicators",
+  "Technical analysis",
+  "finance",
+  "forex",
+  "stocks",
+  "Bitcoin"
  ],
  "scripts": {
   "test": "mocha",
