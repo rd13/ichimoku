@@ -1,16 +1,16 @@
 class Ichimoku {
 	constructor(input) {
-		let _this = this
+		let _this = this;
 
 		this.defaults = {
 			conversionPeriod : 9,
 			basePeriod       : 26,
 			spanPeriod       : 52,
 			displacement     : 26
-		}
+		};
 
 		// Overwrite param defaults
-		this.params = Object.assign({}, this.defaults, input)
+		this.params = Object.assign({}, this.defaults, input);
 
 		this.generator = (function* () {
 			let result
@@ -19,8 +19,10 @@ class Ichimoku {
 			let period = Math.max(_this.params.conversionPeriod, _this.params.basePeriod, _this.params.spanPeriod, _this.params.displacement)
 			let periodCounter = 0
 			let spanCounter = 0
+			let lagCounter = 0
 			let highs = []
 			let lows = []
+			let closes = []
 			let spanAs = []
 			let spanBs = []
 
@@ -34,6 +36,8 @@ class Ichimoku {
 				// Keep a list of lows/highs for the max period
 				highs.push(tick.high)
 				lows.push(tick.low)
+				// Keep a list of closes for the lagging span
+				closes.push(tick.close)
 
 				if(periodCounter < period) {
 					periodCounter++
@@ -69,11 +73,21 @@ class Ichimoku {
 						spanB = spanBs.shift()
 					}
 
-					result = {
+					// Chikou Span (Lagging Span): Close plotted 26 days in the past
+					let close = 0
+                    if(lagCounter > _this.params.displacement) {
+                        lagCounter++
+                    } else {
+                        close = parseFloat(closes.shift())
+                    }
+
+
+                    result = {
 						conversion : parseFloat(conversionLine.toFixed(5)),
 						base       : parseFloat(baseLine.toFixed(5)),
 						spanA      : parseFloat(spanA.toFixed(5)),
-						spanB      : parseFloat(spanB.toFixed(5))
+						spanB      : parseFloat(spanB.toFixed(5)),
+						lagging	   : parseFloat(close.toFixed(5))
 					}
 
 				}
@@ -84,7 +98,7 @@ class Ichimoku {
 		
 	}
 	nextValue(price) {
-		return this.generator.next(price).value;
+		return this.generator.next(price).value
 	}
 
 }

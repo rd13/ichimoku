@@ -10,6 +10,7 @@ It calculates:
 2. Kijun-sen (Base Line): (26-period high + 26-period low)/2))
 3. Senkou Span A (Leading Span A): (Conversion Line + Base Line)/2))
 4. Senkou Span B (Leading Span B): (52-period high + 52-period low)/2))
+5. Chikou Span (Lagging Span): Close plotted 26 days in the past
 
 ###### Usage
 ```javascript
@@ -36,6 +37,7 @@ for( let candle of candles ) {
 	"conversion" : 1.33956,
 	"base"       : 1.33723,
 	"spanA"      : 1.33791,
-	"spanB"      : 1.33735
+	"spanB"      : 1.33735,
+	"lagging"    : 1.33326
 }
 ```

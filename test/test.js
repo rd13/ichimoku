@@ -41,67 +41,81 @@ describe('Ichimoku', () => {
 		expect(ichimokuValue).to.contain.key('spanB')
 	})
 
+    it('should return a Lagging span', () => {
+        expect(ichimokuValue).to.contain.key('lagging')
+    })
+
 	it('should calculate the correct line values', () => {
 		expect(ichimokuValues).to.deep.equal([
 				{
 						conversion: 1.3393,
 						base: 1.33666,
 						spanA: 1.3376,
-						spanB: 1.33744
+						spanB: 1.33744,
+					    lagging: 1.33330
 				},
 				{
 						conversion: 1.33921,
 						base: 1.33666,
 						spanA: 1.33748,
-						spanB: 1.33744
+						spanB: 1.33744,
+					    lagging: 1.33332
 				},
 				{
 						conversion: 1.33899,
 						base: 1.33666,
 						spanA: 1.33752,
-						spanB: 1.33744
+						spanB: 1.33744,
+					    lagging: 1.33352
 				},
 				{
 						conversion: 1.33899,
 						base: 1.33666,
 						spanA: 1.33759,
-						spanB: 1.33736
+						spanB: 1.33736,
+					    lagging: 1.33326
 				},
 				{
 						conversion: 1.339,
 						base: 1.33668,
 						spanA: 1.33783,
-						spanB: 1.33736
+						spanB: 1.33736,
+					    lagging: 1.33410
 				},
 				{
 						conversion: 1.33956,
 						base: 1.33723,
 						spanA: 1.33791,
-						spanB: 1.33736
+						spanB: 1.33736,
+					    lagging: 1.33465
 				},
 				{
 						conversion: 1.33956,
 						base: 1.33723,
 						spanA: 1.33791,
-						spanB: 1.33736
+						spanB: 1.33736,
+					    lagging: 1.33501
 				},
 				{
 						conversion: 1.33956,
 						base: 1.33723,
 						spanA: 1.33771,
-						spanB: 1.33736
+						spanB: 1.33736,
+					    lagging: 1.33518
 				},
 				{
 						conversion: 1.33982,
 						base: 1.3375,
 						spanA: 1.33771,
-						spanB: 1.33716
+						spanB: 1.33716,
+					    lagging: 1.33504
 				},
 				{
 						conversion: 1.33982,
 						base: 1.3375,
 						spanA: 1.33811,
-						spanB: 1.33709
+						spanB: 1.33709,
+					    lagging: 1.33506
 				}
 			])
 	})
