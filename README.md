@@ -1,4 +1,4 @@
-[![Travis CI](https://img.shields.io/travis/rd13/ichimoku.svg?style=flat-square)](https://travis-ci.org/rd13/ichimoku)
+[![Travis CI](https://img.shields.io/travis/rd13/ichimoku.svg?style=flat-square)](https://travis-ci.org/rd13/ichimoku) [![npm version](https://badge.fury.io/js/ichimoku.svg)](https://badge.fury.io/js/ichimoku)
 
 # Ichimoku Kinko Hyo Technical Indicator
 
@@ -10,6 +10,11 @@ It calculates:
 2. Kijun-sen (Base Line): (26-period high + 26-period low)/2))
 3. Senkou Span A (Leading Span A): (Conversion Line + Base Line)/2))
 4. Senkou Span B (Leading Span B): (52-period high + 52-period low)/2))
+
+###### Installation
+``` bash
+npm install ichimoku
+```
 
 ###### Usage
 ```javascript
