@@ -11,12 +11,12 @@ It calculates:
 3. Senkou Span A (Leading Span A): (Conversion Line + Base Line)/2))
 4. Senkou Span B (Leading Span B): (52-period high + 52-period low)/2))
 
-###### Installation
+## Installation
 ``` bash
 npm install ichimoku
 ```
 
-###### Usage
+## Usage
 ```javascript
 const ichimoku = new Ichimoku({
 	conversionPeriod : 9,
